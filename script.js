@@ -4,6 +4,11 @@
 // 	let txt = fname.getElementById();
 // 	return txt.toUpperCase();
 // }
-document.getElementById("fname").addEventListener("blur", function() {
-    this.value = this.value.toUpperCase();
-});
+
+let inp_val = document.getElementById("fname");
+function upp() {
+	let val = inp_val.value;
+	inp_val.value = val.toUpperCase();
+    // this.value = this.value.toUpperCase();
+}
+	inp_val.addEventListener("blur", upp);
